@@ -4,6 +4,7 @@ import {AMC} from './AMC/AMC';
 import {NavigationContainer} from '@react-navigation/native';
 import {Renewal} from './Renewal/Renewal';
 import {Contact} from './Contact/Contact';
+import {kAMC, kContact, kRenewal, kSiteLog} from '../Common/Constants';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -12,10 +13,10 @@ export const Main = () => {
     <>
       <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen name="SiteLog" component={SiteLog} />
-          <Tab.Screen name="AMC" component={AMC} />
-          <Tab.Screen name="Renewal" component={Renewal} />
-          <Tab.Screen name="Contact" component={Contact} />
+          <Tab.Screen name={kSiteLog} component={SiteLog} />
+          <Tab.Screen name={kAMC} component={AMC} />
+          <Tab.Screen name={kRenewal} component={Renewal} />
+          <Tab.Screen name={kContact} component={Contact} />
         </Tab.Navigator>
       </NavigationContainer>
     </>
